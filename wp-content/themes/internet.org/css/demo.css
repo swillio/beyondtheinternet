@@ -1,0 +1,500 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+    font-family: 'AnimalsNormal';
+    src: url('fonts/animals-webfont.eot');
+    src: url('fonts/animals-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/animals-webfont.woff') format('woff'),
+         url('fonts/animals-webfont.ttf') format('truetype'),
+         url('fonts/animals-webfont.svg#AnimalsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html { height: 100%; }
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 3000 !important;
+}
+
+header svg {
+  fill: white;
+}
+
+header .menu span {
+  color: white !important;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    background: #f8f8f8;
+    /*background: none;*/
+    font-weight: 300;
+    font-size: 15px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: #555;
+	text-decoration: none;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+}
+
+.container.demo-1 {
+	height: 100%;
+	position: absolute;
+}
+
+.clr {
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+
+.main {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+
+/*
+  Max-width is an IMPORTANT property
+*/
+.container > header,
+.content-wrapper {
+	padding: 50px;
+	width: 100%;
+	/*max-width: 960px;*/
+	margin: 0 auto;
+}
+
+.content-wrapper p{
+	padding-top: 30px;
+	line-height: 26px;
+}
+
+.container > header h1 {
+	font-size: 34px;
+	line-height: 38px;
+	margin: 0;
+	font-weight: 700;
+	color: #333;
+	float: left;
+}
+
+.container > header h1 span {
+	display: block;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+	float: right;
+	padding-top: 10px;
+}
+
+.demo-1 .codrops-demos {
+	position: absolute;
+	z-index: 2000;
+	top: 30px;
+	left: 30px;
+}
+
+.menu {
+  float: right;
+  padding-top: 22.5px;
+}
+
+.menu button {
+  font-weight: bold;
+  font-size: 14px;
+  background: none;
+  border: none;
+  border-style: none;
+  cursor: pointer;
+}
+
+.menu button:active,
+.menu button:focus {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menuTrigger {
+}
+
+.codrops-demos a {
+    display: inline-block;
+    margin: 10px;
+    color: #333;
+    font-weight: 700;
+    line-height: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+.codrops-demos a:hover {
+	color: #883d59;
+	border-color: #883d59;
+}
+
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+	color: #aaa;
+	border-color: #aaa;
+}
+
+.first-intro {
+  padding-bottom: 0 !important;
+  margin-bottom: -75px !important;
+  margin-top: 200px !important;
+}
+
+.rest-intros {
+  margin-top: 100px !important;
+}
+
+.closing {
+  padding-bottom: 0 !important;
+  margin-bottom: -50px !important;
+  margin-top: 150px !important;
+}
+
+.call-to-action {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-center;
+}
+
+.get-involved,
+.get-the-latest,
+.get-in-touch {
+  width: 100%;
+}
+
+.get-involved blockquote p span a,
+.get-the-latest blockquote p span a,
+.get-in-touch blockquote p a {
+  font-size: 18px;
+  color: #f7f7f7 !important;
+  position: relative;
+  text-decoration: none;
+}
+
+/*
+  Source & Credit: http://bit.ly/1Ii5sFB @ Tobias Ahlin
+  -- Sean W., Feb 21 2016, 11:39 AM
+*/
+.get-involved blockquote p span a:before,
+.get-the-latest blockquote p span a:before,
+.get-in-touch blockquote p a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #f7f7f7;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.get-involved blockquote p span a:hover:before,
+.get-the-latest blockquote p span a:hover:before,
+.get-in-touch blockquote p a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*
+  Source & Credit: http://bit.ly/1Ii5sFB @ Tobias Ahlin
+  -- Sean W., Feb 21 2016, 11:39 AM
+*/
+
+.fa-angle-double-right {
+  font-size: 75% !important;
+  color: #ffcc02;
+}
+
+.sl-slide-inner blockquote a {
+	color: white;
+}
+
+.sl-slide-inner blockquote a cite i {
+	position: relative;
+  -webkit-transition: 500ms ease-in-out;
+  -moz-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  -ms-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+/*.sl-slide-inner blockquote a cite i:hover {
+  -webkit-transform: translate(25px, 0);
+  -moz-transform: translate(25px, 0);
+  -o-transform: translate(25px, 0);
+  -ms-transform: translate(25px, 0);
+  transform: translate(25px, 0);
+}*/
+
+.hovered {
+  -webkit-transform: translate(25px, 0);
+  -moz-transform: translate(25px, 0);
+  -o-transform: translate(25px, 0);
+  -ms-transform: translate(25px, 0);
+  transform: translate(25px, 0);
+}
+
+.dehovered {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+
+/*
+  Sidebar
+*/
+
+.sidebar {
+  background-color: rgba(0,0,0,0.80);
+  color: rgba(255,255,255,0.8);
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: 4001;
+  box-shadow: 0px -5px 56px 18px rgba(0,0,0,0.40);
+  transition: transform 0.3s;
+}
+
+.sidebar ul li {
+  list-style: none;
+  font-family: 'Lato';
+}
+
+.search {
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  width: 100%;
+  height: 65px;
+  border-bottom: 1.5px solid rgba(0,0,0,0.4);
+}
+.search .zmdi-search {
+  position: absolute;
+  top: 22px;
+  left: 60px;
+  font-size: 25px;
+}
+.search input {
+  color: #f8f8f8;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 250px;
+  margin-left: 100px;
+  margin-top: 15px;
+  border: 0;
+  border-style: 0;
+  outline: 0;
+}
+
+.zmdi-close {
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.main-items {
+  color: #f8f8f8;
+  padding-top: 75px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.zmdi-circle-o {
+  font-size: 40% !important;
+  color: rgba(255,255,255,0.40);
+}
+
+.main-items ul li {
+  margin-top: 10px;
+}
+
+.main-items ul li a {
+  color: #f8f8f8 !important;
+}
+
+.main-items ul li a:hover {
+  border-bottom: 2.5px solid white;
+  padding-bottom: 3px;
+}
+
+#side-mission {
+  border-color: #9F1BA2;
+}
+
+#side-approach {
+  border-color: #FC58B7;
+}
+
+#side-impact {
+  border-color: #FF6B00;
+}
+
+.main-items ul li a {
+  transition:color 0.5s ease-out, background 0.5s ease-in;
+}
+
+/*
+  Fancy table styles
+*/
+
+.secondary-items {
+  margin-left: 25px;
+  margin-top: 75px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 10px;
+  width: 95%;
+}
+table td, table th {
+  border: 1.5px solid rgb(80,80,80);
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  /*border-bottom: 0;*/
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+table td {
+  padding: 17.5px;
+}
+
+table td:hover {
+  /*background-color: rgb(80,80,80);*/
+}
+
+#td-1, #td-2, #td-3,
+#td-4, #td-5, #td-6 {
+  transition:color 0.5s ease-out, background 0.5s ease-in;
+}
+
+#td-1:hover {
+  background: #9F1BA2;
+}
+#td-2:hover {
+  background: #FC58B7;
+}
+#td-3:hover {
+  background: #FF6B00;
+}
+#td-4:hover {
+  background: #9F1BA2;
+}
+#td-5:hover {
+  background: #FC58B7;
+}
+#td-6:hover {
+  background: #FF6B00;
+}
+
+.secondary-items table tr td a {
+  color: #f8f8f8;
+}
+
+.zmdi-caret-down {
+  font-size: 24px;
+}
+
+.lang {
+  color: #f8f8f8 !important;
+  text-transform: uppercase;
+  margin-top: 75px;
+  margin-left: 50px;
+}
+
+.lang select {
+   color: #f8f8f8 !important;
+   text-transform: uppercase;
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-bottom: 1.5px solid rgb(80,80,80);
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   outline: none;
+
+ }
+
+ .lightboxify {
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(0,0,0,0.50);
+   z-index: 3999;
+ }
+
+ /*
+  Toggle Attributes
+ */
+
+ .hidden {
+   display: none;
+ }
